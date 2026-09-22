@@ -7,7 +7,6 @@
     "activeTab",
     "contextMenus",
     "scripting",
-    "sidePanel",
     "storage",
     "tabs"
   ],
@@ -16,6 +15,9 @@
     "http://localhost:3000/*"
   ],
   "background": {
+    "scripts": [
+      "background.js"
+    ],
     "service_worker": "background.js"
   },
   "action": {
@@ -32,5 +34,14 @@
       },
       "description": "Open Peanut 2 Speech"
     }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "peanut-2-speech@gilbert-josh.local"
+    }
+  },
+  "sidebar_action": {
+    "default_title": "Peanut 2 Speech",
+    "default_panel": "sidepanel.html"
   }
 }
