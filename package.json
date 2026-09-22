@@ -1,0 +1,12 @@
+{
+  "name": "peanut-2-speech",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Speechify-style browser reader using the local Text-to-speech Kokoro engine.",
+  "scripts": {
+    "check": "node scripts/check-extension.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

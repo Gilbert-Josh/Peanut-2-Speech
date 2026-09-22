@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Peanut 2 Speech",
+  "version": "0.1.0",
+  "description": "A local Speechify-style reader powered by your Text-to-speech Kokoro engine.",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "scripting",
+    "sidePanel",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:3000/*",
+    "http://localhost:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Peanut 2 Speech"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "commands": {
+    "open-reader": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "Open Peanut 2 Speech"
+    }
+  }
+}
