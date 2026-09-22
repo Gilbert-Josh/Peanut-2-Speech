@@ -4,7 +4,7 @@ Peanut 2 Speech is a Speechify-style browser reader built around the existing lo
 
 ## Current MVP
 
-- Chrome/Edge Manifest V3 extension
+- Chrome/Edge/Firefox browser extension (Manifest V3-compatible)
 - Read the current webpage
 - Read highlighted/selected text
 - Right-click selected text and send it to Peanut 2 Speech
@@ -24,6 +24,8 @@ Start the existing desktop app first, then load `extension/` as an unpacked exte
 
 ## Load the extension
 
+### Chrome / Edge
+
 1. Open `chrome://extensions` (or `edge://extensions`).
 2. Enable **Developer mode**.
 3. Choose **Load unpacked**.
@@ -31,6 +33,18 @@ Start the existing desktop app first, then load `extension/` as an unpacked exte
 5. Open a normal webpage.
 6. Click the Peanut 2 Speech extension icon.
 7. Choose **Read page** or **Read selection**.
+
+### Firefox
+
+1. Open `about:debugging#/runtime/this-firefox`.
+2. Click **Load Temporary Add-on…**.
+3. Select `extension/manifest.json` from this repository.
+4. Open a normal webpage.
+5. Open the Firefox sidebar with **Ctrl+Shift+Z** or the sidebar button.
+6. Select **Peanut 2 Speech**.
+7. Choose **Read page** or **Read selection**.
+
+Firefox uses its native `sidebar_action`, while Chrome/Edge use `side_panel`. The same extension code supports both.
 
 ## Architecture
 
